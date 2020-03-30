@@ -9,6 +9,6 @@ Work in GlowScript
 #### Eulers method
 [GlowScript]( https://www.glowscript.org/#/user/juliadebecka/folder/PJATK/program/Pendulum2)
 
-### Modified Eulers method
+#### Modified Eulers method
 
 [GlowScript](https://www.glowscript.org/#/user/juliadebecka/folder/PJATK/program/Pendulum)
