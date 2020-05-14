@@ -20,8 +20,8 @@ class Calculator:
 
 temperatures = [150, 100, 200, 50]
 
-rows = 100
-columns = 100
+rows = 6
+columns = 7
 answer = 0
 
 wooden_block_temperature = np.zeros((rows, columns))
@@ -71,7 +71,7 @@ for i in range(1, rows - 1):
         if t_i_j == 0:
             check_dictionary_put_value(-4, i, j, row_number_count)
         else:
-            answer += t_i_j
+            answer += 4 * t_i_j
 
         if t_i_plus == 0:
             check_dictionary_put_value(1, i + 1, j, row_number_count)
@@ -101,13 +101,15 @@ print(answer_array, answers)
 X = np.linalg.inv(answer_array).dot(answers)
 index = 0
 
+
+
 print(X)
 
 for i in range(1, rows - 1):
     for j in range(1, columns - 1):
-        if wooden_block_temperature[i][j] == 0:
-            wooden_block_temperature[i][j] = X[index]
-            index += 1
+        wooden_block_temperature[i][j] = X[index]
+        index += 1
+        
 sns.heatmap(wooden_block_temperature, cmap="YlOrRd")
 # annot=True, fmt=".2f"
 plt.xlabel("", size=columns)
