@@ -7,4 +7,3 @@ drawing = Draw_Path()
 
 word = l_system.iterate_replace(7)
 drawing.draw(word)
-

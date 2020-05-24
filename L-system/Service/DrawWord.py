@@ -9,7 +9,7 @@ class Draw_Path:
         self.robot = turtle.Turtle()
         self.angle = 25
         self.stack = []
-        self.distance = 10
+        self.distance = 5
 
     def draw(self, word):
         # symbols = ["X", "F", "+", "-", "[", "]"]
@@ -22,7 +22,7 @@ class Draw_Path:
                 self.robot.penup()
                 self.robot.forward(self.distance)
                 self.robot.pendown()
-                self.robot.pencolor('green')
+                self.robot.pencolor('pink')
             if letter == "[":
                 self.stack.append((self.robot.heading(), self.robot.pos()))
             if letter == "]":
@@ -43,10 +43,10 @@ class Draw_Path:
             self.robot.right(180)
 
     def init(self):
-        self.robot.left(self.angle)
+        self.robot.left(90)
         self.robot.speed(0)
         self.robot.hideturtle()
         self.robot.penup()
-        self.robot.setpos(-self.window.window_width()/2, -self.window.window_height()/2)
+        self.robot.setpos(0, -self.window.window_height()/2)
         self.robot.showturtle()
         self.robot.pendown()
